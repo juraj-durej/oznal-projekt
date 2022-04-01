@@ -55,7 +55,7 @@ def is_point_located_in_polygon(point, coords=manhattan_coords):
 def remove_non_manhattan_neighbourhoods(geo_map):
     geo_map['features'] = [x for x in geo_map['features']
                            if is_point_located_in_polygon(x['geometry']['coordinates'][0][0][0])
-                           and x['properties']['ntacode'] not in ['MN01', 'MN99', 'QN71', 'QN68', 'BK38']]
+                           and x['properties']['ntacode'] not in ['MN99', 'QN71', 'QN68', 'BK38']]
 
     return geo_map
 
